@@ -1,0 +1,15 @@
+<p>list works!</p>
+
+<!-- http://localhost:4200/list/details -->
+<!-- <a routerLink="details">Details</a> -->
+<ul>
+    @for (product of storeService.products; track product.id) {
+    <li><a [routerLink]="product.id">{{product.name}}</a></li>
+    }
+</ul>
+
+<hr>
+<!-- http://localhost:4200/details -->
+<!-- <a routerLink="/details">/Details</a> -->
+
+<router-outlet></router-outlet>
