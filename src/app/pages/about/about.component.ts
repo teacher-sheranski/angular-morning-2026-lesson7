@@ -11,6 +11,7 @@ export class AboutComponent {
   // סרוויס שמאפשר ניווט דרך הקוד
   // היתרון - ניתן לבדוק תנאים ולנתב בצורה דינאמית
   private _router = inject(Router);
+  private _history = inject(History);
 
   goHome() {
     // TODO: go to '/'
@@ -18,5 +19,8 @@ export class AboutComponent {
 
     // ניתן לכתוב מערך של ניתובים ויבצע שרשור
     // this._router.navigate(['/']);
+
+    // כך מנווטים לעמוד הקודם בו היינו
+    // this._history.back();
   }
 }
